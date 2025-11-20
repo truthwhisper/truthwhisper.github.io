@@ -113,9 +113,9 @@ menu:
       name: tags
       url: /tags/
       weight: 20
-    - identifier: Admin Site
-      name: admin.lucathar.site
-      url: https://admin.lucathar.site
+    - identifier: website
+      name: main
+      url: https://lucathar.site
       weight: 30
 
 pygmentsUseClasses: true
