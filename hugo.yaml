@@ -1,4 +1,4 @@
-baseURL: "https://admin.lucathar.site/"
+baseURL: "http://admin.lucathar.site/"
 languageCode: en-us
 title: Lux-Admin By MTLG
 pagination.pagerSize: 5
