@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Lux-Admin By MTLG</title>
-    <link>https://admin.lucathar.site/tags/</link>
+    <link>http://admin.lucathar.site/tags/</link>
     <description>Recent content in Tags on Lux-Admin By MTLG</description>
     <image>
       <title>Lux-Admin By MTLG</title>
@@ -11,6 +11,6 @@
     </image>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
-    <atom:link href="https://admin.lucathar.site/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://admin.lucathar.site/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
