@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Lux-Admin By MTLG</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Lux-Admin By MTLG</description>
+    <image>
+      <title>Lux-Admin By MTLG</title>
+      <url>https://upld.zone.id/uploads/3fiqg9qiq/image.webp</url>
+      <link>https://upld.zone.id/uploads/3fiqg9qiq/image.webp</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
