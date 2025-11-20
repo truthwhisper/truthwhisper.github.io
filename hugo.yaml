@@ -1,5 +1,5 @@
 baseURL: "https://admin.lucathar.site/"
-languageCode: "en-us"
+languageCode: en-us
 title: Lux-Admin By MTLG
 pagination.pagerSize: 5
 
@@ -19,7 +19,7 @@ params:
   keywords: [Blog, Portfolio, PaperMod]
   author: Me
   images: ["https://upld.zone.id/uploads/3fiqg9qiq/image.webp"]
-  DateFormat: "January 2, 2006"
+  DateFormat: "November 20, 2025"
   defaultTheme: light # dark, light
   disableThemeToggle: true
 
@@ -76,8 +76,8 @@ params:
   socialIcons:
     - name: x
       url: "https://x.com/"
-    - name: stackoverflow
-      url: "https://stackoverflow.com"
+    - name: mastodon
+      url: "https://mstdn.plus/"
     - name: github
       url: "https://github.com/"
 
@@ -113,9 +113,9 @@ menu:
       name: tags
       url: /tags/
       weight: 20
-    - identifier: Main Site
-      name: lucathar.site
-      url: https://lucathar.site
+    - identifier: Admin Site
+      name: admin.lucathar.site
+      url: https://admin.lucathar.site
       weight: 30
 
 pygmentsUseClasses: true
