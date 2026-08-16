@@ -5,8 +5,8 @@ WORKDIR /build
 RUN <<HEREDOC
     apk add libmsquic dotnet10-sdk git curl
 
-    mkdir /opt/technitium/dns && cd /opt/technitium/dns \
-    && \
+    mkdir /opt/technitium/dns
+    
     git clone --depth 1 https://github.com/TechnitiumSoftware/TechnitiumLibrary.git TechnitiumLibrary
     git clone --depth 1 https://github.com/TechnitiumSoftware/DnsServer.git DnsServer
 
