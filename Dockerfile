@@ -1,6 +1,7 @@
 # syntax=docker.io/docker/dockerfile:1
-FROM mcr.microsoft.com/dotnet/aspnet:10.0-alpine3.24-arm64v8
+FROM alpine:edge AS build
 WORKDIR /build
+
 RUN <<HEREDOC
     apk add libmsquic dotnet10-sdk git curl
 
@@ -15,6 +16,7 @@ RUN <<HEREDOC
     mkdir /etc/dns
 HEREDOC
 
+FROM alpine:edge
 RUN apk add -U --no-cache aspnetcore10-runtime libmsquic doggo
 
 WORKDIR /opt/technitium/dns
