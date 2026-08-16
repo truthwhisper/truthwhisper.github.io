@@ -1,11 +1,8 @@
-# syntax=docker.io/docker/dockerfile:1
 FROM alpine:3.23 AS build
 WORKDIR /
 
 RUN <<HEREDOC
-    apk add libmsquic dotnet10-sdk git curl
-
-    mkdir /opt/technitium/dns
+    apk add ca-certificates libmsquic dotnet10-sdk git curl
     
     git clone --depth 1 https://github.com/TechnitiumSoftware/TechnitiumLibrary.git TechnitiumLibrary
     git clone --depth 1 https://github.com/TechnitiumSoftware/DnsServer.git DnsServer
