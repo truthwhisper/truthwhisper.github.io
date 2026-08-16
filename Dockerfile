@@ -22,7 +22,7 @@ FROM alpine:3.23
 RUN apk add -U --no-cache aspnetcore10-runtime libmsquic doggo
 
 WORKDIR /opt/technitium/dns
-COPY --link --from=build /build/DnsServer/DnsServerApp/bin/Release/publish /opt/technitium/dns
+COPY --link --from=build DnsServer/DnsServerApp/bin/Release/publish /opt/technitium/dns
 
 ENTRYPOINT ["/usr/bin/dotnet", "/opt/technitium/dns/DnsServerApp.dll"]
 CMD ["/etc/dns"]
