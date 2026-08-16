@@ -1,5 +1,5 @@
 # syntax=docker.io/docker/dockerfile:1
-FROM alpine:edge AS build
+FROM alpine:3.23 AS build
 WORKDIR /build
 
 RUN <<HEREDOC
@@ -18,7 +18,7 @@ RUN <<HEREDOC
     mkdir /etc/dns
 HEREDOC
 
-FROM alpine:edge
+FROM alpine:3.23
 RUN apk add -U --no-cache aspnetcore10-runtime libmsquic doggo
 
 WORKDIR /opt/technitium/dns
