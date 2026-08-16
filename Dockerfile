@@ -1,6 +1,6 @@
 # syntax=docker.io/docker/dockerfile:1
 FROM alpine:3.23 AS build
-WORKDIR /build
+WORKDIR /
 
 RUN <<HEREDOC
     apk add libmsquic dotnet10-sdk git curl
@@ -14,7 +14,7 @@ RUN <<HEREDOC
     dotnet build TechnitiumLibrary/TechnitiumLibrary.Net/TechnitiumLibrary.Net.csproj -c Release
     dotnet build TechnitiumLibrary/TechnitiumLibrary.Security.OTP/TechnitiumLibrary.Security.OTP.csproj -c Release
     
-    dotnet publish DnsServer/DnsServerApp/DnsServerApp.csproj -c Release
+    dotnet publish DnsServerApp/DnsServerApp.csproj -c Release
     mkdir /etc/dns
 HEREDOC
 
@@ -22,7 +22,7 @@ FROM alpine:3.23
 RUN apk add -U --no-cache aspnetcore10-runtime libmsquic doggo
 
 WORKDIR /opt/technitium/dns
-COPY --link --from=build DnsServer/DnsServerApp/bin/Release/publish /opt/technitium/dns
+COPY --link ./DnsServerApp/bin/Release/publish /opt/technitium/dns
 
 ENTRYPOINT ["/usr/bin/dotnet", "/opt/technitium/dns/DnsServerApp.dll"]
 CMD ["/etc/dns"]
