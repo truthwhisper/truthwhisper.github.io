@@ -32,7 +32,3 @@ EXPOSE \
   67/udp
 
 LABEL org.opencontainers.image.title="Fork of Technitium DNS Server"
-LABEL org.opencontainers.image.vendor="Technitium"
-LABEL org.opencontainers.image.source="https://github.com/truthwhisper/truthwhisper.github.io"
-LABEL org.opencontainers.image.url="https://truthwhisper.github.io/"
-LABEL org.opencontainers.image.authors="lucathar@gmail.com"
