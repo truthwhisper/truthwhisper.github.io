@@ -1,1 +1,1 @@
-# [ServerAlpine](https://alpine.drthesmos.cv)
+# [Alpine-67](https://alpine.drthesmos.cv)
