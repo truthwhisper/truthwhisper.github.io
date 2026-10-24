@@ -36,7 +36,7 @@ jobs:
            with:
               platform: linux/amd64
               push: true
-              tags: asmgh-debian:latest
+              tags: ${{ github.actor }}/${{ github.repository }}:latest
               cache-from: type=gha
               cache-to: type=gha,mode=max,ignore-error=true
 
