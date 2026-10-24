@@ -1,2 +1,2 @@
-# truthwhisper.github.io
-Registry
+# [Registry: Server-67](https://truthwhisper.github.io/)
+
