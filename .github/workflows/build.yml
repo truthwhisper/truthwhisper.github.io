@@ -34,7 +34,7 @@ jobs:
          - name: Build and Push
            uses: docker/build-push-action@v7
            with:
-              platform: linux/amd64
+              platforms: linux/amd64
               push: true
               tags: user/app:latest
               cache-from: type=gha
