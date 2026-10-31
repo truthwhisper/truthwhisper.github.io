@@ -20,11 +20,10 @@ RUN apt-get update && \
 RUN mkdir -p /root/.ssh && \
     ssh-keyscan github.com >> /root/.ssh/known_hosts
 
-WORKDIR /
 RUN --mount=type=ssh git clone git@github.com:truthwhisper/truthwhisper.github.io.git /
 
 ENV DEBIAN_FRONTEND=noninteractive
-ENV LANG en_US.utf-8
+ENV LANG=en_US.utf-8
 ENV PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
 ENV HOME=/root
 
