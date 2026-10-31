@@ -30,7 +30,6 @@ ENV HOME=/root
 
 USER root
 EXPOSE 5000
-CMD ["/bin/bash", "-c", "--login"]
 
 LABEL org.opencontainers.image.title="ASMGH-67"
 LABEL org.opencontainers.image.source="https://github.com/truthwhisper/truthwhisper.github.io"
