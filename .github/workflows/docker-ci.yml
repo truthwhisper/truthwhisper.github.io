@@ -60,7 +60,7 @@ jobs:
       - name: Build base
         uses: docker/build-push-action@v7
         with:
-          context: "{{defaultContext}}:base"
+          context: "{{defaultContext}}:-"
           tags: truthwhisper.github.io/asmgh:dev
           platforms: linux/amd64,linux/arm64
           push: true
