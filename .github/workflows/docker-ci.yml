@@ -61,7 +61,7 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           context: "{{defaultContext}}"
-          tags: truthwhisper.github.io/asmgh:dev
+          tags: truthwhisper/asmgh:dev
           platforms: linux/amd64,linux/arm64
           push: true
 
@@ -69,7 +69,7 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           build-contexts: |
-            debian=docker-image://truthwhisper.github.io/asmgh:dev
+            debian=docker-image://truthwhisper/asmgh:dev
           tags: |
              aspanic/asmgh:latest
              asmgh:latest
