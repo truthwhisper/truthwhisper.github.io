@@ -26,6 +26,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV LANG=en_US.utf-8
 ENV PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
 ENV HOME=/root
+ENV TERM=xterm-256color
 
 USER root
 EXPOSE 5000
