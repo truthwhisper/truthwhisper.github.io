@@ -33,6 +33,7 @@ jobs:
         with:
           context: .
           platforms: linux/amd64
+          push: true
           tags: truthwhisper/deb-67:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
