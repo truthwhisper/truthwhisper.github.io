@@ -3,6 +3,7 @@ name: CI Build
 on:
   push:
     branches: [ "main" ]
+  pull_request:
 
 permissions:
   contents: read
@@ -34,6 +35,6 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
-          tags: truthwhisper/deb-67:latest
+          tags: user/app:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
