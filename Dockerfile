@@ -1,5 +1,5 @@
-# syntax=docker.io/docker/dockerfile:1
-FROM --platform=linux/amd64 debian:stable
+# syntax=docker/dockerfile:1
+FROM --platform=$BUILDPLATFORM debian:stable
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV LANG=en_US.utf8
