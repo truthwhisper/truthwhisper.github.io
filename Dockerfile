@@ -1,7 +1,8 @@
 # syntax=docker/dockerfile:1
 FROM ghcr.io/truthwhisper/deb-67:latest
 LABEL maintainer="lucathar@gmail.com"
-
+ARG HOME=/root
+USER root
 RUN apt-get update \
     apt-get install -y ca-certificates \
     curl \
