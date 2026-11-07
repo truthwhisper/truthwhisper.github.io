@@ -9,7 +9,7 @@ RUN apt-get update \
     systemctl \
     && rm -rf /var/lib/apt/lists/*
     
-RUN "bash <(curl -fsSL https://install.openvpn.com/as/DgiqdsQZFBogi0er) --yes"
+RUN curl -fsSL https://install.openvpn.com/as/DgiqdsQZFBogi0er --yes
 
 COPY docker-entrypoint.sh /
 
