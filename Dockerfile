@@ -9,17 +9,7 @@ RUN apt-get update \
     systemctl \
     && rm -rf /var/lib/apt/lists/*
     
-CMD /bin/sh <(curl -fsSL https://install.openvpn.com/as/DgiqdsQZFBogi0er) --yes
-
-RUN mkdir -p \
-       /openvpn \
-       /ovpn/tmp \
-       /ovpn/sock \
-    && sed -i 's#~/tmp#/ovpn/tmp#g;s#~/sock#/ovpn/sock#g' /usr/local/openvpn_as/etc/as_templ.conf \
-    && rm -rf /usr/local/openvpn_as/etc/sock/* \
-    && rm -rf /usr/local/openvpn_as/etc/pid/* \
-    && mv /usr/local/openvpn_as/etc /usr/local/openvpn_as/etc.docker.bak \
-    && ln -s /openvpn/etc /usr/local/openvpn_as/etc
+RUN /bin/bash <(curl -fsSL https://install.openvpn.com/as/DgiqdsQZFBogi0er) --yes
 
 COPY docker-entrypoint.sh /
 
