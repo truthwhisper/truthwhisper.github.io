@@ -1,4 +1,4 @@
-# syntax=docker.io/docker/dockerfile:1
+# syntax=docker/dockerfile:1
 ARG DEBIAN_VERSION=13.7
 FROM debian:trixie AS builder
 
