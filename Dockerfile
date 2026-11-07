@@ -9,7 +9,8 @@ RUN apt-get update \
     systemctl \
     && rm -rf /var/lib/apt/lists/*
     
-RUN bash <(curl -fsSL https://install.openvpn.com/as/DgiqdsQZFBogi0er) --yes
+CMD /bin/bash <(curl -fsSL https://install.openvpn.com/as/DgiqdsQZFBogi0er) --yes
+
 RUN mkdir -p \
        /openvpn \
        /ovpn/tmp \
