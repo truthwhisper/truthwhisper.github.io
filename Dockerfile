@@ -7,9 +7,10 @@ RUN apt-get update \
     && apt-get install -y ca-certificates \
     curl \
     systemctl \
-    && curl -fsSL https://install.openvpn.com/as/DgiqdsQZFBogi0er --yes \
-    && rm -rf /var/lib/apt/lists/* \
-    && mkdir -p \
+    && rm -rf /var/lib/apt/lists/*
+    
+RUN bash <(curl -fsSL https://install.openvpn.com/as/DgiqdsQZFBogi0er) --yes
+RUN mkdir -p \
        /openvpn \
        /ovpn/tmp \
        /ovpn/sock \
