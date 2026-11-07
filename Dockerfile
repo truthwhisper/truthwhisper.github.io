@@ -1,4 +1,9 @@
-FROM scratch
-ADD https://dl-cdn.alpinelinux.org/alpine/v3.24/releases/x86_64/alpine-minirootfs-3.24.4-x86_64.tar.gz /
-CMD ["/bin/sh"]
+# syntax=docker/dockerfile:1
+FROM ghcr.io/truthwhisper/deb-67:latest
 LABEL maintainer="lucathar@gmail.com"
+ARG LANG=C.en_US.UTF8
+ARG HOME=/root
+ARG PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
+USER root
+EXPOSE 8000
+CMD ["/bin/bash"]
