@@ -39,6 +39,6 @@ jobs:
           load: true
           platforms: linux/amd64
           push: true
-          tags: app:ci
+          tags: ghcr.io/truthwhisper/deb-67:latest
           cache-from: type=gha,scope=app-linux-amd64
           cache-to: type=gha,scope=app-linux-amd64,mode=max
