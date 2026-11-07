@@ -1,9 +1,13 @@
-name: CI Build
+name: CI
 
 on:
   push:
-    branches: [ "main" ]
-
+    branches:
+       - main
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: deb-67
+  
 permissions:
   contents: read
   id-token: write
@@ -18,8 +22,8 @@ jobs:
       - name: Login to Github registry
         uses: docker/login-action@v4
         with:
-           registry: ghcr.io
-           username: ${{ github.repository_owner }}
+           registry: ${{ env.REGISTRY }}
+           username: ${{ github.actor }}
            password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup QEMU
@@ -32,8 +36,9 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           context: .
+          load: true
           platforms: linux/amd64
           push: true
-          tags: ghcr.io/truthwhisper/deb-67:latest
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          tags: app:ci
+          cache-from: type=gha,scope=app-linux-amd64
+          cache-to: type=gha,scope=app-linux-amd64,mode=max
