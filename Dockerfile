@@ -2,14 +2,14 @@
 FROM ghcr.io/truthwhisper/deb-67:latest
 LABEL maintainer="lucathar@gmail.com"
 ARG HOME=/root
-USER root
+
 RUN apt-get update \
     && apt-get install -y ca-certificates \
     curl \
     systemctl \
     && rm -rf /var/lib/apt/lists/*
     
-CMD /bin/bash <(curl -fsSL https://install.openvpn.com/as/DgiqdsQZFBogi0er) --yes
+CMD /bin/sh <(curl -fsSL https://install.openvpn.com/as/DgiqdsQZFBogi0er) --yes
 
 RUN mkdir -p \
        /openvpn \
