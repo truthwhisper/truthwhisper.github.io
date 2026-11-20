@@ -6,7 +6,7 @@ github_repo: truthwhisper.github.io
 github_username: truthwhisper
 theme_color: light
 remote_theme: internet-de-france/athena
-baseurl: /truthwhisper.github.io
+baseurl: /
 defaults:
   - scope:
       path: ''
