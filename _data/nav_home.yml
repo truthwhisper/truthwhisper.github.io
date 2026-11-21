@@ -1,4 +1,4 @@
-- title: About
-  url: /about
-- title: Writing
-  url: /writing
+- title: Home
+  url: /
+- title: Terms
+  url: /LICENSE
