@@ -1,10 +1,9 @@
 ---
 layout: home
-permalink: "/"
-title: Athena Jekyll Theme
+permalink: /
+title: NSERVER
 
 ---
-
-A simple and elegant theme for Jekyll and GitHub Pages.
+[@truthwhisper](https://truthwhisper.github.io)
 
 
