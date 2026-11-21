@@ -1,6 +1,6 @@
 - title: Home
   url: /
-- title: About
-  url: /about
-- title: Writing
-  url: /writing
+- title: Introduction
+  url: /README.md
+- title: Awesome-projects
+  url: /SUMMARY.md
